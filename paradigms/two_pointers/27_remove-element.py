@@ -1,5 +1,5 @@
-# Author: whiteshirt
-# Email: heikoti.schwarz@gmail.com
+# Author: b1tank
+# Email: b1tank@outlook.com
 #=================================
 
 '''

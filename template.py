@@ -1,5 +1,5 @@
-# Author: whiteshirt
-# Email: heikoti.schwarz@gmail.com
+# Author: b1tank
+# Email: b1tank@outlook.com
 #=================================
 
 '''
@@ -17,8 +17,9 @@ class Solution():
         :rtype: __
         """
 
-        # e.g. __
+        # Beginning of walkthrough ==============================
 
+        # End of walkthrough ====================================
 
         return __
         

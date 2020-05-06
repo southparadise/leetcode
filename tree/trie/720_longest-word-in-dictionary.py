@@ -1,12 +1,12 @@
-# Author: whiteshirt
-# Email: heikoti.schwarz@gmail.com
+# Author: b1tank
+# Email: b1tank@outlook.com
 #=================================
 
 '''
 720_Longest_Word_in_Dictionary on LeetCode
 
 Solution: 
-    - Trie 
+    - Trie: TrieNode has a value and a hashmap of child nodes
     - Depth First Search (DFS) implemented using both stack and recursive
 '''
 
