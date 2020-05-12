@@ -37,7 +37,7 @@ char left_of(const char & c) {
 };
 
 int main() {
-    std::string s = "({[]})[]";
+    std::string s = "({[]})[";
 
     std::stack<char> st;
     for (char& c : s) {
@@ -45,11 +45,13 @@ int main() {
             st.push(c);
         } else {
             if (st.empty() || st.top() != left_of(c)) {
-                return false;
+                std::cout << "False" << std::endl;
             } else {
                 st.pop();
             }
         }
     }
-    return st.empty();
+    std::string res = st.empty() ? "True" : "False";
+    std::cout << res << std::endl;
+    return 0;
 }

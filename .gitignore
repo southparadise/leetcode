@@ -13,6 +13,7 @@ __pycache__/
 # C/C++ extensions
 *.so
 *.out
+*.dSYM/
 
 # Distribution / packaging
 .Python
