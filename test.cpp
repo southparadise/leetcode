@@ -24,11 +24,13 @@ using namespace std;
 
 int main() {
     string s = "({[]})[]";
+    int n = 34;
+    int div = n / 10;
+    int mod = n % 10;
 
-    string origin = s;
-    sort(s.begin(), s.end());
-    cout << origin << endl;
-    cout << s << endl;
+    cout << n / 10 << endl;
+    cout << div << endl;
+    cout << mod << endl;
 
     return 0;
 }

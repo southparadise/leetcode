@@ -3,14 +3,15 @@
 //=================================
 
 /*
- LeetCode
+__filename__ LeetCode
 
 Solution: 
     - 
 */
 
-class Solution {
-public:
-    bool isValid(int s) {
-    }
-};
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
