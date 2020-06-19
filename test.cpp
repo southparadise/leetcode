@@ -20,23 +20,27 @@
 #include <functional>
 #include <algorithm>
 
+#include <sstream>
+
 using namespace std;
 
+void removeDuplicateStars (string& p) {
+    stringstream ss;
+    string prev = "";
+    for (auto c : p) {
+        if (c != '*' || prev != "*") {
+            ss << c;
+        }
+        prev = c;
+    }
+    ss >> p;
+}
 int main() {
-    string s = "({[]})[]";
+    string s = "a**b*c***";
     vector<vector<int>> res;
     vector<int> tmp;
-    for (auto i = 0; i < 5; ++i) {
-        tmp.push_back(i); 
-        res.push_back(tmp);
-        tmp.clear();
-    }
-    for (auto v : res) {
-        for (auto i : v) {
-            cout << i << endl;
-            cout << "___" << endl;
-        }
-    }
 
+    removeDuplicateStars(s);
+    cout << s << endl;
     return 0;
 }
