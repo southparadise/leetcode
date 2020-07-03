@@ -23,16 +23,11 @@
 using namespace std;
 
 int main() {
-    string s = "({[]})[]";
-    vector<vector<int>> res;
-    vector<int> tmp;
-    for (auto i = 0; i < 5; ++i) {
-        tmp.push_back(i); 
-        res.push_back(tmp);
-        tmp.clear();
-    }
+    vector<vector<bool>> res(4, vector<bool>(5));
     for (auto v : res) {
         for (auto i : v) {
+            bool ret = i == false;
+            cout << ret << endl;
             cout << i << endl;
             cout << "___" << endl;
         }
