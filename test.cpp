@@ -20,8 +20,21 @@
 #include <functional>
 #include <algorithm>
 
+#include <sstream>
+
 using namespace std;
 
+void removeDuplicateStars (string& p) {
+    stringstream ss;
+    string prev = "";
+    for (auto c : p) {
+        if (c != '*' || prev != "*") {
+            ss << c;
+        }
+        prev = c;
+    }
+    ss >> p;
+}
 int main() {
     vector<vector<bool>> res(4, vector<bool>(5));
     for (auto v : res) {
@@ -33,5 +46,7 @@ int main() {
         }
     }
 
+    removeDuplicateStars(s);
+    cout << s << endl;
     return 0;
 }
