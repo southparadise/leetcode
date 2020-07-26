@@ -6,7 +6,8 @@
 146_lru-cache LeetCode
 
 Solution: 
-    - 
+    - linked hashmap is a hashmap whose values are pointers to the nodes in a linkedlist
+    - use head and tail for easy management of linkedlist
 */
 
 #include <iostream>
