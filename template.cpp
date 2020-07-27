@@ -14,6 +14,9 @@ Solution:
 #include <string>
 #include <memory>
 #include <unordered_map>
+#include <unordered_set>
+#include <set>
+#include <algorithm>
 
 using namespace std;
 
