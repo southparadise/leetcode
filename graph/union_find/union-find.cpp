@@ -34,17 +34,15 @@ using namespace std;
 
 class UnionFind {
 
+    int count;
     vector<int> hm_parent;
     vector<int> hm_size;
-    int count;
 
 public:
     // init
-    UnionFind(int N) : hm_parent(N), hm_size(N) {
-        count = N;
+    UnionFind(int N) : count(N), hm_parent(N), hm_size(N, 1) {
         for (int i = 0; i < N; i++) {
             hm_parent[i] = i;
-            hm_size[i] = 1;
         }
     }
 
