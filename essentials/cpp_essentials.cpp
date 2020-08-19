@@ -274,9 +274,11 @@ int main() {
     // * Can be looped through using iterators from begin() to end()
     // * Array/vector are not hashable. One way to work around is to convert it to strings.
     unordered_set<int> s;
-    unordered_set<int> s1( {"red", "blue", "green"} );
+    unordered_set<int> s1{"red", "blue", "green"}; // {} is list initialization for containers, which is preferred !!!
+    // unordered_set<int> s1( {"red", "blue", "green"} ); // also correct but allows parsing ambiguities !!!
     unordered_map<string, int> m;
-    unordered_map<string, int> m1( {{"red", 1}, {"blue", 2}, {"green", 3}} );
+    unordered_map<string, int> m1{{"red", 1}, {"blue", 2}, {"green", 3}}; // {} is list initialization for containers, which is preferred !!!
+    // unordered_map<string, int> m1( {{"red", 1}, {"blue", 2}, {"green", 3}} ); // also correct but allows parsing ambiguities !!!
 
     int ss = s.size();
     if (s.empty()) {}
@@ -310,7 +312,8 @@ int main() {
 
     // (ordered) set and multiset; (map and multimap)
     set<int> s;
-    set<int> s1( {"red", "blue", "green"} );
+    set<int> s1{"red", "blue", "green"}; // {} is list initialization for containers, which is preferred !!!
+    // set<int> s1( {"red", "blue", "green"} ); // also correct but allows parsing ambiguities !!!
 
     int ss = s.size();
     if (s.empty()) {}
@@ -486,7 +489,7 @@ int main() {
             { 'C', {'A'} },
             { 'D', {'B'} }
         }
-    };
+    }; // {} gives direct initialization with explicit constructor; whereas ={} gives copy initialization !!!!!
     
     //// algorithm
 
@@ -529,6 +532,11 @@ int main() {
     }
     ss << concluder;
     string joined_str = ss.str();
+
+    // stringstream peek and EOF (empty stringstream is a special case!!!)
+    stringstream ss("");
+    ss.peek(); // make empty ss reach EOF !!!
+    if (ss.eof()) {} // true; false without peek() call above
 
     // binary search
     int target = 4;
