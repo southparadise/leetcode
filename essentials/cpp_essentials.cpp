@@ -103,9 +103,10 @@ int main() {
     int s = a.length();
     int ss = a.size();
 
+    a.find("tr") == string::npos; // find or not
     a.find("tr");
     a.find("tr", 4);
-    a.find("tr", 4, 1);
+    a.find("tr", 4, 1); // starting pos, len
     a.rfind("tr"); // last appearance
     a.rfind("tr", 4);
     a.rfind("tr", 4, 1);
@@ -137,6 +138,13 @@ int main() {
     vector<vector<int>> v(3, vector<int>(8));
     vector<int> v(v1.begin()+1, v1.end());
     vector<pair<int, int>> vp;
+
+    v = v1; // copy another vector
+    v = vector<int>(); // const vector<>&
+    v = {2, 3}; // initializer list
+
+    // return {}; // return empty vector
+    // return vector<int>();
 
     v.push_back(4);
     v.pop_back();
@@ -246,7 +254,7 @@ int main() {
 
     class pointCompLessThan {
     public:
-        bool operator()(point& a, point& b) {  // Operator()!!!
+        bool operator()(point& a, point& b) {  // operator()!!!
             return a.x < b.x;
         }
     };
@@ -543,14 +551,14 @@ int main() {
     vector<int> arr{1, 2, 3, 4, 5};
     int l = 0;
     int r = arr.size()-1;
-    while (l < r) {
+    while (l < r) { // or l <= r
         int mid = l + (r-l) / 2;
         if (target == arr[mid]) {
             return mid;
         } else if (target > arr[mid]) {
             l = mid + 1;
         } else {
-            r = mid;
+            r = mid; // or r = mid - 1
         }
     }
 

@@ -21,13 +21,13 @@ class TreeNode:
 class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:
         # Beginning of walkthrough ==============================
-            1
-           / \
-          2   3   
-         / \   \
-        8   4   7
-           / \
-          5   6
+        #     1
+        #    / \
+        #   2   3   
+        #  / \   \
+        # 8   4   7
+        #    / \
+        #   5   6
 
         # End of walkthrough ====================================
 
