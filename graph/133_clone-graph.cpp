@@ -46,7 +46,7 @@ class Solution {
 public:
     Node* cloneGraph(Node* node) {
         if (!node) return nullptr;
-        hm[node] = new Node(node->val);
+        hm[node] = new Node(node->val); // visited; also containing the node-to-copy relationship
         queue<Node*> q;
         q.push(node);
         while (!q.empty()) {
@@ -57,7 +57,7 @@ public:
                     hm[n] = new Node(n->val);
                     q.push(n);
                 }
-                hm[cur]->neighbors.push_back(hm[n]); 
+                hm[cur]->neighbors.push_back(hm[n]); // must be out of the if block above !!!!
             }
         }
         return hm[node];

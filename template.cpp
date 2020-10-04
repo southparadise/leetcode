@@ -17,6 +17,8 @@ Solution:
 #include <cmath> // pow(3.0, 4.0)
 #include <cstdlib> // rand() % 100 + 1
 #include <vector>
+#include <forward_list> // singly-linked list
+#include <list> // doubly-linked list
 #include <stack>
 #include <queue>
 #include <deque>

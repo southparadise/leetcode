@@ -15,6 +15,8 @@
 #include <cstdlib> // rand() % 100 + 1; abs(-3)
 
 #include <vector>
+#include <forward_list> // singly-linked list
+#include <list> // doubly-linked list
 #include <stack>
 #include <queue>
 #include <deque>
